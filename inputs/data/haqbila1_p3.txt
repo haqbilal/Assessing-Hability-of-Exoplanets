@@ -1,0 +1,34 @@
+Planet haqbila1_p3
+================Host Star Info================= 
+Spectral Type: A
+Age of the System (Gyr): 0.0204
+Binary System: Single Star
+Stellar Luminosities (Solar Units): 7.63
+Total Stellar Mass (Solar Masses): 1.66
+Stellar Radius (Solar Radii): 1.62
+================haqbila1_p3 Info===============
+Planet Orbital Period (Years): 4.38
+Planet Semi-Major Axis (AU): 3.17
+Planet Mass (Earth Masses): 1.83
+Planet Radius (Earth Radii): 1.47
+Eccentricity: 0.172
+-----------------------------------------------
+Atmospheric Composition (Percent by Volume): 
+
+Gas          Your Values      Earth Values    
+------------ ---------------- -----------------
+H2O          71.503           2.500            
+CO2          12.669           0.041            
+N2           6.806            76.174           
+O2           9.022            20.434           
+Others       0.000            0.852            
+-----------------------------------------------
+===============Other Useful Info===============
+Number of other (known) Planets in the System: 1
+Location in the Galaxy: Open Cluster
+Distance from Earth (lightyears): 8.72E+03
+Atmospheric Pressure (atm): 1.03
+Planet Axial Tilt (degrees): 23.3
+Planet Rotation Period (Hours): 9.57
+Magnetic Field Strength (Units of Earth Magnetic Field): 0.724
+

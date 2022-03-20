@@ -1,0 +1,34 @@
+Planet haqbila1_p2
+================Host Star Info================= 
+Spectral Type: F
+Age of the System (Gyr): 1.01
+Binary System: Single Star
+Stellar Luminosities (Solar Units): 5.74
+Total Stellar Mass (Solar Masses): 1.55
+Stellar Radius (Solar Radii): 1.51
+================haqbila1_p2 Info===============
+Planet Orbital Period (Years): 0.957
+Planet Semi-Major Axis (AU): 1.12
+Planet Mass (Earth Masses): 0.608
+Planet Radius (Earth Radii): 0.758
+Eccentricity: 0.0606
+-----------------------------------------------
+Atmospheric Composition (Percent by Volume): 
+
+Gas          Your Values      Earth Values    
+------------ ---------------- -----------------
+CO2          97.790           0.041            
+O2           0.720            20.434           
+N2           0.659            76.174           
+H2O          0.626            2.500            
+SO2          0.204            0.000            
+Others       0.000            0.852            
+-----------------------------------------------
+===============Other Useful Info===============
+Number of other (known) Planets in the System: 0
+Location in the Galaxy: Disk
+Distance from Earth (lightyears): 103
+Planetary Albedo: 0.745
+Planet Axial Tilt (degrees): 16.7
+Magnetic Field Strength (Units of Earth Magnetic Field): 0.958
+
