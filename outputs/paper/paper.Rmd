@@ -43,17 +43,26 @@ Now we apply the methods discussed above and assess the habitability of the plan
 
 The properties of Star 1 (corresponding to Planet 1) are satisfactory to continue analysis. With a spectral type F, and an age of 2.55 Gyr, as well the system having no other stars, this star is capable of hosting habitable planets. The star's mass is 1.41 solar masses, greater than 0.65, meaning it isn't statistically unlikely to host habitable planets. We don't need to use the star's luminosity or radius because the planet's surface temperature is given at 310K, which is in suitable range for water to exist in liquid form. An orbital period (2.07), semi-major axis (1.82), planet mass (3.61), planet radius (1.49), are all within acceptable range to Earth's properties. The exception is for the planet's eccentricity (0.182), which combined with the relatively high stellar luminosity of 3.91 does not provide definite information. 
 
-Planet 1's atmosphere is dominantly comprised of CO2, and it also contains H20 and O2. This follows with the atmospheric compositions of discovered known habitable planets as in the study referenced above, which is another potential sign of habitability. The planet is located in the Milky Way disk, so there are no problems in the galactic neighbourhood, but nearby planets don't provide enough information about the region. The planet's atmospheric pressure is low at 0.319, which means water exists in liquid form in a lower temperature range, but a surface temperature of 310K is likely to be contained in this restricted range. The high planetary albedo of 0.46 combined with the slow rotational period of 22.1 hours is another sign that life could sustain on this planet. With an axial tilt of 4.85 and magnetic field strength of 76.6% that of Earth's, this planet is capable of undergoing seasonal change, and maintaining it's atmosphere.
-
-Thus, overall, we have justified why each quality is in line with those of other observed habitable planets as well as Earth, which means we can reasonably conclude that Planet 1 is habitable.
+Planet 1's atmosphere is dominantly comprised of CO2, and it also contains H2O and O2. This follows with the atmospheric compositions of discovered known habitable planets as in the study referenced above, which is another potential sign of habitability. The planet is located in the Milky Way disk, so there are no problems in the galactic neighbourhood, but nearby planets don't provide enough information about the region. The planet's atmospheric pressure is low at 0.319, which means water exists in liquid form in a lower temperature range, but a surface temperature of 310K is likely to be contained in this restricted range. The high planetary albedo of 0.46 combined with the slow rotational period of 22.1 hours is another sign that life could sustain on this planet. With an axial tilt of 4.85 and magnetic field strength of 76.6% that of Earth's, this planet is capable of undergoing seasonal change, while maintaining it's atmosphere.
 
 ## Planet 2
 
+The properties of Star 2 are enough to continue analysis as well. It has a spectral type F, an age of 1.01 Gyr, is the only star in it's system, and has a mass 1.55 > 0.65. While it's stellar radius is 1.51 > 1.5, it is close enough to warrant further study. We can use the star's luminosity, 5.74, to determine the habitable zone with the formula from @Whitmire_Reynolds_1996:
 
+\begin{align*}
+r_0 &= \sqrt{\frac{L}{1.1}} = \sqrt{\frac{5.74}{1.1}} = 2.3 \text{ AU} \\
+r_1 &= \sqrt{\frac{L}{0.53}} = \sqrt{\frac{5.74}{0.53}} = 3.3 \text{ AU}
+\end{align*}
+
+Thus planets within 2.3-3.3 AU are in the habitable zone of this star. Although Planet 2, with distance 1.12AU from the star is thus not within the habitable zone, research as indicated above has discovered it is still possible for this planet to be habitable, based on other properties. Planet 2's orbital period is very close to Earth's, at 0.957, but it's mass and radius put it at smaller in size. It's orbit is also not very eccentric, with eccentricity 0.0606. 
+
+In terms of the atmosphere, with a chemical composition primarily made up of CO2, and traces of O2, N2, H2O, and SO2, this planet is similar in regard to other known habitable planets, including Earth. As it is located in the Milky Way disk, with no neighbouring planets, there are no problems with it's region in space. The very high planetary albedo of 0.745 will require a rotational period (unknown) faster than Earth in order for Planet 2 to stay a valid candidate for habitability. However, it does have a strong enough magnetic field, 95.8% of Earth's, to help maintain it's atmosphere.
 
 # Discussion and Next Steps
 
+Thus, overall, for Planet 1, we have justified and provided evidence as to why each quality is in line with those of other observed habitable planets as well as Earth, which means we can reasonably conclude that Planet 1 is habitable. On the other hand, we have evidence pointing in both ways, towards and away from habitability, for Planet 2, because it is not in the habitable zone, but does have other factors in favour. So we cannot conclude anything definite on the habitability of Planet 2. 
 
+If more information on Planet 2's surface temperature, atmospheric pressure, and planetary rotational period was available, we could potentially draw more sound conclusions.
 
 \newpage
 # References
