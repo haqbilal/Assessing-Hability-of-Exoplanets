@@ -1,12 +1,9 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
-author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: LINK."
+title: "Assessing the Habitability of Exoplanets"
+author: Bilal Haq
+thanks: "Code and data are available at: https://github.com/haqbilal/Assessing-Hability-of-Exoplanets"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "In this paper, we examine detailed descriptions of planets and perform an assessment of their habitability. The analysis will be based on the methods taught and practiced in class, as well as independent research. Thus we demonstrate how to use the properties given; star/planet information, atmospheric composition, and other known values, to determine if that planet is capable of sustaining at least single celled life. We will look at planets 1 and 2 of the given three, corresponding to text files p1 and p2. The analysis was conducted using R (@citeR). The data was obtained from http://astro.utoronto.ca/~ast251/AST251_2022_Project2/. "
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -17,91 +14,46 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-library(palmerpenguins)
 ```
+
+\newpage
 
 # Introduction
 
-You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point). 
+Firstly, a slightly looser definition of habitable from @kasting2014remote, is an Earth-like planet around different types of main-sequence stars having liquid water on its surface over an extended period of time. Moreover, the habitable zone is the range of orbital distances for which a planet described above may exist. For each case, we are given properties of the star, the planet, and other useful values to help determine the habitability of each planet. 
+
+## Properties of the Star
+
+From @raghavan2010survey, stars supporting habitable planets will have spectral class within the range of late F mid K.  And according to @Greicius_2015, stars must be at least a hundred million years old (and we assume the planets formed around the same time). Single-star systems will have more stable orbits, so they are more habitable. A luminosity that doesn't vary too much is ideal for habitability, keeping the energy output of the star similar at all times. Also, the luminosity is directly proportional to the star's habitable zone, while the radius is inversely proportional (@Morris_2010). Lastly, from @Waltham_2017, stars smaller than 0.65 solar masses are statistically unlikely to host habitable planets.
+
+## Properties of the Planet
+
+The orbital period of a planet has no percieved effect on it's habitability (@Shields_Barnes_Agol_Charnay_Bitz_Meadows_2016), but we may use the semi-major axis to determine if the planet is in the habitable zone (@Morris_2010). Further, using the habitable planets catalog (@habitable_catalog), we see that habitable planets often have a radius of between 0.5 and 1.5 Earth radii. From @Bolmont_Libert_Leconte_Selsis_2016, planets with eccentricity close to Earth's (0.01671) may be suitable for life, but the effect of high luminosity combined with high eccentricity is not known, so other methods may be used. Finally, planets containing one of CH4, H20, N2, O2, CO2 as the dominant compound in their atmospheres are likely candidates for habitability according to @Konatham_Martin-Torres_Zorzano_2020. Alongside, most candidate habitable exoplanets also contained H/He. Thus planets with this composition or an Earth-like composition are likely to be habitable. 
+
+## Other Useful Properties
+
+Primarily, locations with high star population density can be problematic to the formation of life on a planet, because of excess radiation from stellar evolution of all local stars (@Skibba). Thus the optimal location for stars and their planets in terms of habitability is the disk of the Milky Way galaxy, where stars are more spaced apart, meaning their influence on other stars' planets is lessened. As atmospheric pressure increases, so does the habitability of a planet because it allows for water to exist in liquid form for a wider range of temperatures (@Vladilo_Murante_Silva_Provenzale_Ferri_Ragazzini_2013). Thus planets with higher atmospheric pressures than Earth, and all other attributes similar, are more likely to be habitable as a result. By @albedo, a bond albedo of ~0.3 (close to Earth) or 0 is often assumed when assessing the habitability of planets, but Earth's albedo of 0.3 is usually only the minimum required for a planet with an F-K type star. Thus planet's albedo can vary, and still result in a habitable world. 
+From @McKay_2014, water can exist in liquid form in the range -15 to 122 degrees Celsius, which is 258 to 395 degrees kelvin. Thus a planet with surface temperature in this range is required for life to grow and reproduce. In addition, the axial tilt of a planet causes different parts of a planet to be in direct radiation from it's star. This causes seasonal change on Earth, which has an axial tilt of 23.5 degrees. For example, if a planet's tilt is such that it's glaciers come into the star's radiance, then they would melt and allow for liquid water, even among other non-habitable conditions (@Garner_2015). In combination with a high albedo, a slowly rotating planet is a candidate for habitability because of long daytime illumination. A fast rotating planet (like Earth) with low albedo allows for more illumination during a smaller time period, to accomplish habitabiltiy as well (@Yang_Boue_Fabrycky_Abbot_2014). Also, @magnetic_field indicates that a strong magnetic field is required for habitability, as it protects a planet from stellar wind eroding away the atmosphere necessary for life to exist.
+
+# Methodology
+
+Now we apply the methods discussed above and assess the habitability of the planets provided in the dataset. Planet 1 corresponds to the dataset 'haqbila1_p1.txt' and Planet 2 corresponds to 'haqbila1_p2.txt'.
+
+## Planet 1
+
+The properties of Star 1 (corresponding to Planet 1) are satisfactory to continue analysis. With a spectral type F, and an age of 2.55 Gyr, as well the system having no other stars, this star is capable of hosting habitable planets. The star's mass is 1.41 solar masses, greater than 0.65, meaning it isn't statistically unlikely to host habitable planets. We don't need to use the star's luminosity or radius because the planet's surface temperature is given at 310K, which is in suitable range for water to exist in liquid form. An orbital period (2.07), semi-major axis (1.82), planet mass (3.61), planet radius (1.49), are all within acceptable range to Earth's properties. The exception is for the planet's eccentricity (0.182), which combined with the relatively high stellar luminosity of 3.91 does not provide definite information. 
+
+Planet 1's atmosphere is dominantly comprised of CO2, and it also contains H20 and O2. This follows with the atmospheric compositions of discovered known habitable planets as in the study referenced above, which is another potential sign of habitability. The planet is located in the Milky Way disk, so there are no problems in the galactic neighbourhood, but nearby planets don't provide enough information about the region. The planet's atmospheric pressure is low at 0.319, which means water exists in liquid form in a lower temperature range, but a surface temperature of 310K is likely to be contained in this restricted range. The high planetary albedo of 0.46 combined with the slow rotational period of 22.1 hours is another sign that life could sustain on this planet. With an axial tilt of 4.85 and magnetic field strength of 76.6% that of Earth's, this planet is capable of undergoing seasonal change, and maintaining it's atmosphere.
+
+Thus, overall, we have justified why each quality is in line with those of other observed habitable planets as well as Earth, which means we can reasonably conclude that Planet 1 is habitable.
+
+## Planet 2
 
 
 
-# Data
+# Discussion and Next Steps
 
-Our data is of penguins (Figure \@ref(fig:bills)).
-
-```{r bills, fig.cap="Bills of penguins", echo = FALSE}
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = FALSE) +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk more about it.
-
-Also bills and their average (Figure \@ref(fig:billssssss)). (Notice how you can change the height and width so they don't take the whole page?)
-
-```{r billssssss, fig.cap="More bills of penguins", echo = FALSE, fig.width=8, fig.height=4}
-
-# This needs to be about the random data tha tI sasmpled?
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = FALSE) +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk way more about it. 
-
-
-
-# Model
-
-\begin{equation}
-Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}  (\#eq:bayes)
-\end{equation}
-
-Equation \@ref(eq:bayes) seems useful, eh?
-
-Here's a dumb example of how to use some references: In paper we run our analysis in `R` [@citeR]. We also use the `tidyverse` which was written by @thereferencecanbewhatever If we were interested in baseball data then @citeLahman could be useful. 
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
-
-
-# Results
-
-# Discussion
-
-## First discussion point
-
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
-
-## Second discussion point
-
-## Third discussion point
-
-## Weaknesses and next steps
-
-Weaknesses and next steps should also be included.
-
-\newpage
-
-\appendix
-
-# Appendix {-}
-
-
-# Additional details
 
 
 \newpage
-
-
 # References
-
-
